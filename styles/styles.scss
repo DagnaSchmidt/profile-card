@@ -1,0 +1,143 @@
+//base//
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+//variables//
+:root {
+
+    //colors//
+    --main-color: #09432A;
+    --main-color-2: #E76684;
+    --title: #F2D5CD;
+    --text: #16211F;
+    --text-light: #F2D5CD;
+    --white: #fff;
+
+    //font//
+    --font: 'Nunito', sans-serif;
+
+    //font sizes// 
+    --h1-font-size: 40px;
+    --h2-font-size: 12px;
+    --normal-font-size: 12px;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--font);
+}
+
+.card-container {
+    width: 390px;
+    margin: 56px 16px;
+
+    .card-one {
+        height: 160px;
+        width: 100%;
+        &__img {
+            object-fit: cover;
+            img {
+                height: 160px;
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .card-two {
+        height: 484px;
+        width: 100%;
+        background-color: var(--main-color);
+        border-radius: 12px;
+        margin: 8px 0px;
+        display: block;
+        .main-title {
+            font-style: normal;
+            font-weight: 800;
+            font-size: var(--h1-font-size);
+            padding-top: 120px;
+            display: flex;
+            justify-content: center;
+            color: var(--title);
+            margin-bottom: 8px;
+        }
+        .second-title {
+            font-size: var(--h2-font-size);
+            font-weight: 600;
+            color: var(--main-color-2);
+            display: flex;
+            justify-content: center;
+        }
+        .about {
+            font-size: var(--normal-font-size);
+            font-weight: 600;
+            color: var(--text);
+            margin: 20px 20px 8px 20px;
+        }
+        .contact {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin: 8px 20px 0px 20px;
+            font-size: var(--normal-font-size);
+            font-weight: 400;
+            color: var(--text-light);
+            i {
+                color: var(--main-color-2);
+                margin: 8px;
+            }
+            i:hover {
+                transform: scale(1.1);
+            }
+            .contact-right, .contact-left {
+                height: 64px;
+            }
+        }
+    }
+
+    .card-three {
+        height: 72px;
+        width: 100%;
+        background-color: var(--main-color-2);
+        border-radius: 12px;
+        .icons-container {
+            position: relative;
+            top: 12px;
+            display: flex;
+            justify-content: space-between;
+            margin: 12px;
+            .icon {
+                height: 48px;
+                width: 48px;
+                margin: 8px;
+                i {
+                    color: var(--main-color);
+                    font-size: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+//profile photo// 
+
+.circle {
+    position: absolute;
+    top: 136px;
+    width: 422px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 12px solid #FFFFFF;
+    }
+}
